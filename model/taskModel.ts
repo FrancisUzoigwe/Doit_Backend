@@ -11,8 +11,8 @@ interface iTaskData extends iTask, Document {}
 const taskModel = new Schema<iTaskData>(
   {
     user: { type: mongoose.Types.ObjectId, ref: "users" },
-    content: { type: String },
-    topic: { type: String },
+    content: { type: String, required: true },
+    topic: { type: String, required: true },
   },
   { timestamps: true }
 );
