@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
-import env from "dotenv";
-env.config();
+
+
+const url: string =
+  "mongodb+srv://kossyuzoigwe:kossyuzoigwe@francisuzoigwe.3irljsp.mongodb.net/doit";
 
 export const doitDB = () => {
-  mongoose.connect(process.env.STRING!).then(() => {
+  mongoose.connect(url).then(() => {
     console.log("Database connection established");
   });
 };

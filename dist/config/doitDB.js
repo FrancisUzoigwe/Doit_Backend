@@ -5,10 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.doitDB = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
+const url = "mongodb+srv://kossyuzoigwe:kossyuzoigwe@francisuzoigwe.3irljsp.mongodb.net/doit";
 const doitDB = () => {
-    mongoose_1.default.connect(process.env.STRING).then(() => {
+    mongoose_1.default.connect(url).then(() => {
         console.log("Database connection established");
     });
 };
